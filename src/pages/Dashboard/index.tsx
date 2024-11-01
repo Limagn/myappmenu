@@ -5,7 +5,7 @@ import { Input } from '../../components/Input'
 import { Container } from './styles'
 import { InputAmount } from '../../components/InputAmount'
 import { InputDate } from '../../components/InputDate'
-import { spendingCreate } from '../../storage/spending/SpendingCreate'
+import { spendingCreate } from '../../storage/spending/spendingCreate'
 export function Dashboard() {
 
   const [name, setName] = useState('')

@@ -4,7 +4,7 @@ import { SPENDING_COLLECTION } from "../storageConfig";
 
 export async function spendingCreate(newSpending: SpendingStorageDTO) {
   try {
-    await AsyncStorage.setItem('key', SPENDING_COLLECTION)
+    await AsyncStorage.setItem(SPENDING_COLLECTION, JSON.stringify(newSpending))
   } catch (error) {
     throw error;
   }
