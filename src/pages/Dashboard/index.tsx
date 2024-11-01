@@ -5,7 +5,8 @@ import { Input } from '../../components/Input'
 import { Container } from './styles'
 import { InputAmount } from '../../components/InputAmount'
 import { InputDate } from '../../components/InputDate'
-import { spendingCreate } from '../../storage/spending/spendingCreate'
+import { spendingCreate } from '../../storage/spending/SpendingCreate'
+import { spendingGetAll } from '../../storage/spending/spendingGetAll'
 export function Dashboard() {
 
   const [name, setName] = useState('')
@@ -24,8 +25,9 @@ export function Dashboard() {
     }
 
     await spendingCreate(data)
+    const result = await spendingGetAll()
 
-    console.log(data)
+    console.log(result)
     setName('')
     setAmount('')
     setDatePurchase('')
